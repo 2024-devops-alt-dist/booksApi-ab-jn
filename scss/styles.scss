@@ -1,10 +1,62 @@
-$primary-color: #3498db;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: $primary-color;
+$primary-color: #8e6be1;
+$secondary-color: #f3eeff;
+$third-color: #ffc001;
+$progress-bar-color: #a5a5a5;
+$book-page-background-color: #364b90;
+$third-opacite-color: rgba(255, 192, 1, 0.5);
+$border-black: rgba(0, 0, 0, 0.5);
+$border-color: rgba(151, 71, 255, 0.41);
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-h1 {
-  color: red;
+.title-h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.title-h2 {
+  font-size: 1.6875rem;
+  font-weight: 600;
+}
+
+.title-h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.title-card {
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+
+.title-book {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.p-card {
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.font-card {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.border-primary-card {
+  box-shadow: 0px 4px 4px $border-black;
+}
+.border_secondary-card {
+  box-shadow: -1px 8px 8px $border-color;
+}
+.border_secondary-card {
+  box-shadow: 0px -4px 7px $border-black;
 }
