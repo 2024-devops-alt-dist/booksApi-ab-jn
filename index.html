@@ -3,15 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title>Biblio Maniac</title>
   </head>
   <body>
-    <h1>Hello Girl</h1>
-    <a href="/pages/list-books.html">Liste books</a>
-    <a href="/pages/book-audio.html">Books audio</a>
-    <a href="/pages/login.html">Login</a>
-    <a href="/pages/list-categories.html">Liste Categorie</a>
-    <a href="/pages/book-page.html">Page du livre</a>
+    <header>
+      <nav class="nav-bar">
+        <ul>
+          <li class="nav-bar-item">
+            <a href="/index.html">
+              <img
+                class="icon-mobile"
+                src="/img/icons/owl-logo.svg"
+                alt="Le logo biblio de maniac"
+              />
+            </a>
+          </li>
+          <li class="nav-bar-item">
+            <a href="/pages/list-books.html">
+              <img
+                class="icon-mobile"
+                src="/img/icons/Book And Pencil.svg"
+                alt="Lien pour acceder à la page des livres à lire."
+              />
+              <button class="button-nav-header p-button">Read</button>
+            </a>
+          </li>
+          <li class="nav-bar-item">
+            <a href="#">
+              <img
+                class="icon-mobile"
+                src="/img/icons/AirPods Pro Max.svg"
+                alt="Lien pour acceder à la page des livres à écouter."
+              />
+            </a>
+          </li>
+          <li class="nav-bar-item">
+            <a href="/pages/login.html">
+              <img
+                class="icon-mobile"
+                src="/img/icons/user.svg"
+                alt="Lien pour acceder à la page de connexion."
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="sections-container">
+      <div class="search">
+        <img src="/img/icons/Search.svg" alt="" />
+      </div>
+      <section class="section activity">
+        <h3 class="title-h2">Activity</h3>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="group-card">
+              <img src="/img/icons/stash_trophy-solid.svg" alt="icon coupe" />
+              <div class="text-card">
+                <h6 class="title-card">Happy Summer</h6>
+                <p>Makes you go out of the house and enjoy the sunshine.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="group-card">
+              <img src="/img/icons/stash_trophy-solid.svg" alt="icon coupe" />
+              <div class="text-card">
+                <h6 class="title-card">Happy Summer</h6>
+                <p>Makes you go out of the house and enjoy the sunshine.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="group-card">
+              <img src="/img/icons/stash_trophy-solid.svg" alt="icon coupe" />
+              <div class="text-card">
+                <h6 class="title-card">Happy Summer</h6>
+                <p>Makes you go out of the house and enjoy the sunshine.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section popular-book">
+        <h3 class="title-h2">Popular Books</h3>
+        <div class="card-container">
+          <div class="card">
+            <div class="group-card">
+              <div class="text-card">
+                <h6 class="title-card">September</h6>
+                <img src="" alt="Couverture du livre les frère Grimm" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section categorie">
+        <h3 class="title-h2">Category</h3>
+        <div class="card-container">
+          <div class="card">
+            <div class="group-card">
+              <img src="" alt="icon d'un livre." />
+              <div class="text-card">
+                <h6 class="title-card">Story Book</h6>
+                <p>We read story book and look at cartoons.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
   </body>
 </html>
