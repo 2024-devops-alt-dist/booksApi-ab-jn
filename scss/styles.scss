@@ -1,4 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+// Utilisation du décorateur @extend afin de bénéficier de l'héritage des classes
 
 /* VARIABLES SCSS */
 $primary-color: #8e6be1;
@@ -105,6 +105,7 @@ a {
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    height: inherit;
     .logo {
       object-fit: cover;
     }
@@ -124,10 +125,16 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+  padding: 3%;
 }
 
 .sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
   position: relative;
+  padding: 4%;
+  padding-top: 6%;
   .section {
     width: 100%;
     .card-container {
@@ -140,7 +147,6 @@ a {
 
       .card {
         flex: 0 0 30%;
-        height: 187px;
         background-color: #fff;
         border-radius: 10px;
         display: flex;
@@ -149,12 +155,14 @@ a {
         align-items: center;
         padding: 20px;
         box-sizing: border-box;
-        min-height: 187px;
         min-width: 367px;
         background-color: $primary-color;
         color: $color-white;
         box-shadow: -1px 8px 8px 0px rgba(151, 71, 255, 0.41);
-
+        &.card-size {
+          height: 187px;
+          min-height: 187px;
+        }
         .group-card {
           display: flex;
           align-items: center;
@@ -165,8 +173,15 @@ a {
           }
         }
       }
+
       .card-category {
+        @extend .card;
+        height: 147px !important;
         background-color: $secondary-color;
+        color: $primary-color;
+        .group-card {
+          gap: 38px;
+        }
       }
 
       .card-book-small {
@@ -196,6 +211,7 @@ a {
     }
   }
 }
+
 .section .card-container .card:nth-child(even) {
   background-color: $color-card;
 }
