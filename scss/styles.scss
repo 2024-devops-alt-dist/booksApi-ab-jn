@@ -240,11 +240,18 @@ a {
   display: none;
 }
 
+/*BOOK PAGE SCSS*/
+
+.content-page-web{
+  display: flex;
+}
+
+/* Image section */
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #f3eeff;
+  color: $secondary-color;
   height: 60vh;
   position: relative;
   z-index: 1;
@@ -303,12 +310,14 @@ a {
   width: 35px;
 }
 
+/*Reading section*/
 .section-book-reading {
+  height: 40vh;
   padding: 20px 20px 0 20px;
   position: relative;
   z-index: 1;
-  color: #f3eeff;
-  background-color: #364b90;
+  color: $secondary-color;
+  background-color: $book-page-background-color;
 }
 .section-book-reading p {
   margin: 0;
@@ -324,13 +333,18 @@ a {
   gap: 20px;
 }
 .section-book-reading .link-book-page .read {
-  background-color: #ffc001;
+  background-color: $third-color;
   width: 150px;
   padding: 15px;
   border-radius: 35px;
   text-align: center;
   font-weight: bold;
   font-size: 1.4rem;
+}
+
+/*Menu desktop*/
+.aside {
+  display: none; 
 }
 
 /* MEDIA QUERRY */
@@ -360,4 +374,50 @@ a {
   .button-nav-header-login {
     display: flex;
   }
+
+  .aside{
+    display: block;
+    color: $secondary-color;
+    width: 200px;
+    height: 100vh;
+    background-color: $color-h1;
+    
+    .title-h1{
+      text-align: center;
+      margin-top: 100px;
+      font-weight: 700;
+    }
+
+    .nav-book-page-desktop {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      
+      .first-group-links{
+        margin: 45px 0 30px 0;
+      }
+      
+      .second-group-links{
+        margin: 60px 0 40px 0;
+      }
+      
+      .third-group-links{
+        margin: 230px 0 0 0;
+      }
+
+      a{
+        padding: 5px 0 5px 0;
+        font-size: 1.25rem;
+        color: $secondary-color;
+        display: flex;
+        align-items: center;
+        img{
+          padding-right: 10px;
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+  
 }

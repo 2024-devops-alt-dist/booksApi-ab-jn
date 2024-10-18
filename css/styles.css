@@ -222,6 +222,12 @@ a {
   display: none;
 }
 
+/*BOOK PAGE SCSS*/
+.content-page-web {
+  display: flex;
+}
+
+/* Image section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -294,7 +300,9 @@ a {
   width: 35px;
 }
 
+/*Reading section*/
 .section-book-reading {
+  height: 40vh;
   padding: 20px 20px 0 20px;
   position: relative;
   z-index: 1;
@@ -327,6 +335,11 @@ a {
   font-size: 1.4rem;
 }
 
+/*Menu desktop*/
+.aside {
+  display: none;
+}
+
 /* MEDIA QUERRY */
 @media (min-width: 768px) {
   .nav-bar {
@@ -349,6 +362,44 @@ a {
   .button-nav-header,
   .button-nav-header-login {
     display: flex;
+  }
+  .aside {
+    display: block;
+    color: #f3eeff;
+    width: 200px;
+    height: 100vh;
+    background-color: #59448d;
+  }
+  .aside .title-h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 700;
+  }
+  .aside .nav-book-page-desktop {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  .aside .nav-book-page-desktop .first-group-links {
+    margin: 45px 0 30px 0;
+  }
+  .aside .nav-book-page-desktop .second-group-links {
+    margin: 60px 0 40px 0;
+  }
+  .aside .nav-book-page-desktop .third-group-links {
+    margin: 230px 0 0 0;
+  }
+  .aside .nav-book-page-desktop a {
+    padding: 5px 0 5px 0;
+    font-size: 1.25rem;
+    color: #f3eeff;
+    display: flex;
+    align-items: center;
+  }
+  .aside .nav-book-page-desktop a img {
+    padding-right: 10px;
+    width: 40px;
+    height: auto;
   }
 }
 
