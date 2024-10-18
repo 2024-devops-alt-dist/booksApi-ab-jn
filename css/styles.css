@@ -230,6 +230,7 @@ a {
 /* Image section */
 .hero {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
   color: #f3eeff;
@@ -387,11 +388,11 @@ a {
     margin: 60px 0 40px 0;
   }
   .aside .nav-book-page-desktop .third-group-links {
-    margin: 230px 0 0 0;
+    margin: 110px 0 0 0;
   }
   .aside .nav-book-page-desktop a {
     padding: 5px 0 5px 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #f3eeff;
     display: flex;
     align-items: center;

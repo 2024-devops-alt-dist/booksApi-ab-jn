@@ -249,6 +249,7 @@ a {
 /* Image section */
 .hero {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
   color: $secondary-color;
@@ -402,12 +403,12 @@ a {
       }
       
       .third-group-links{
-        margin: 230px 0 0 0;
+        margin: 110px 0 0 0;
       }
 
       a{
         padding: 5px 0 5px 0;
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: $secondary-color;
         display: flex;
         align-items: center;
@@ -419,5 +420,9 @@ a {
       }
     }
   }
+  //.content-book{
+  //  display: flex;
+  //  height: 100vh;
+  //}
   
 }
