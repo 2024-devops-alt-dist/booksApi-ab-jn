@@ -4,6 +4,7 @@
 $primary-color: #8e6be1;
 $secondary-color: #f3eeff;
 $third-color: #ffc001;
+$color-h1: #59448d;
 $progress-bar-color: #a5a5a5;
 $book-page-background-color: #364b90;
 $third-opacite-color: rgba(255, 192, 1, 0.5);
@@ -26,7 +27,7 @@ a {
 
 /* STYLES GLOBAUX */
 .title-h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -71,6 +72,8 @@ a {
   font-weight: 400;
 }
 
+/* BUTTON */
+
 .button-nav-header {
   display: flex;
   height: 54px;
@@ -81,13 +84,21 @@ a {
   text-align: center;
   border: none;
   text-decoration: none;
+  display: none;
   color: $primary-color;
   background-color: transparent;
-  display: none;
 }
-
-.border-primary-card {
-  box-shadow: 0px 4px 4px black;
+.button-nav-header-login {
+  display: flex;
+  height: 47px;
+  padding: 12px 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  color: $color-white;
+  border: none;
+  background-color: $primary-color;
+  display: none;
 }
 
 /* NAV BAR */
@@ -99,7 +110,6 @@ a {
   bottom: 0;
   width: 100%;
   height: 97px;
-
   ul {
     display: flex;
     justify-content: space-around;
@@ -107,7 +117,13 @@ a {
     list-style: none;
     height: inherit;
     .logo {
-      object-fit: cover;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      h1 {
+        display: none;
+        color: $color-h1;
+      }
     }
 
     .nav-bar-item-container {
@@ -115,6 +131,7 @@ a {
 
       .nav-bar-item {
         background-color: #9ba3bc;
+        display: flex;
       }
     }
   }
@@ -137,12 +154,14 @@ a {
   padding-top: 6%;
   .section {
     width: 100%;
+    margin: auto;
     .card-container {
       width: 100%;
       display: flex;
+      justify-content: space-between;
       gap: 20px;
+      overflow-x: hidden; /* Cache la scrollbar horizontale */
       overflow-x: auto;
-      scroll-behavior: smooth;
       padding: 20px 0;
 
       .card {
@@ -162,6 +181,9 @@ a {
         &.card-size {
           height: 187px;
           min-height: 187px;
+        }
+        &:nth-child(even):not(.card-category) {
+          background-color: $color-card;
         }
         .group-card {
           display: flex;
@@ -212,8 +234,9 @@ a {
   }
 }
 
-.section .card-container .card:nth-child(even) {
-  background-color: $color-card;
+/* Elément HTML caché pour la sémentique */
+.hidden {
+  display: none;
 }
 
 /* MEDIA QUERRY */
@@ -224,15 +247,23 @@ a {
     box-shadow: 0px 4px 4px $color-shadow-25;
     top: 0;
   }
-  .button-nav-header {
+  .button-nav-header,
+  .button-nav-header-login {
     display: none;
   }
 }
 @media (min-width: 1023px) {
+  .logo {
+    h1 {
+      display: initial !important;
+    }
+  }
   .icon-mobile {
     display: none;
   }
-  .button-nav-header {
-    display: contents;
+
+  .button-nav-header,
+  .button-nav-header-login {
+    display: flex;
   }
 }
