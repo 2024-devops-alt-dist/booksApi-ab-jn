@@ -13,6 +13,7 @@ $color-white: #fff;
 $color-shadow-50: rgba(0, 0, 0, 0.5);
 $color-shadow-25: rgba(0, 0, 0, 0.25);
 $color-card: #fe7834;
+$image-peter-pan: url("../img/peter-pan.jpg");
 
 /* PARAMETRAGE */
 * {
@@ -247,7 +248,7 @@ a {
   height: 60vh;
   position: relative;
   z-index: 1;
-  background-image: url("../img/peter-pan.jpg");
+  background-image: $image-peter-pan;
 }
 .hero::before {
   content: "";
@@ -256,18 +257,16 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../img/peter-pan.jpg");
+  background-image: $image-peter-pan;
   background-size: cover;
-  backdrop-filter: 1;
   filter: blur(8px);
   z-index: 1;
 }
 .hero .icon-close {
-  position: relative;
-  left: 370px;
+  display: flex;
+  justify-content: flex-end;
   z-index: 2;
-  width: 40px;
-  height: auto;
+  margin: 0 20px 5px 0;
 }
 .hero .image-cover {
   position: relative;
@@ -315,12 +314,13 @@ a {
   margin: 0;
 }
 .section-book-reading .link-book-page {
-  position: fixed;
+  justify-content: center;
+  position: relative;
   z-index: 2;
-  bottom: 5px;
+  bottom: 100px;
   display: flex;
   align-items: center;
-  padding: 0 20px 0 35px;
+  padding: 0 20px 0 20px;
   gap: 20px;
 }
 .section-book-reading .link-book-page .read {
