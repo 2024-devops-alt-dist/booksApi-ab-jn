@@ -12,6 +12,7 @@ $color-nav-bar: #fff;
 $color-white: #fff;
 $color-shadow-50: rgba(0, 0, 0, 0.5);
 $color-shadow-25: rgba(0, 0, 0, 0.25);
+$color-shadow: rgb(0 0 0 / 8%);
 $color-card: #fe7834;
 
 /* PARAMETRAGE */
@@ -23,6 +24,7 @@ $color-card: #fe7834;
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* STYLES GLOBAUX */
@@ -34,6 +36,7 @@ a {
 .title-h2 {
   font-size: 1.6875rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .title-h3 {
@@ -112,7 +115,8 @@ a {
   height: 97px;
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 14px;
     align-items: center;
     list-style: none;
     height: inherit;
@@ -140,18 +144,26 @@ a {
 /* SECTION */
 .search {
   position: absolute;
+  z-index: 1000000;
   top: 0;
   right: 0;
-  padding: 3%;
+  padding: 1%;
+}
+.container-main {
+  position: relative;
+  overflow-x: hidden;
 }
 
 .sections-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 9px;
   position: relative;
   padding: 4%;
   padding-top: 6%;
+  min-height: 90vh;
+  overflow-x: hidden;
+
   .section {
     width: 100%;
     margin: auto;
@@ -160,9 +172,13 @@ a {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      overflow-x: hidden; /* Cache la scrollbar horizontale */
+      overflow-x: hidden;
       overflow-x: auto;
       padding: 20px 0;
+      a {
+        display: block;
+        width: 100%;
+      }
 
       .card {
         flex: 0 0 30%;
@@ -233,9 +249,54 @@ a {
     }
   }
 }
+.sections-container-list-categories {
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  width: 100%;
+  padding: 30px 0;
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
 
+    .card-category {
+      // flex: 0 0 30%;
+      background-color: #fff;
+      border-radius: 10px;
+      align-items: center;
+      padding: 10px;
+      width: 80%;
+      box-sizing: border-box;
+      background-color: $primary-color;
+      color: $color-white;
+      box-shadow: -1px 8px 8px 0px rgba(151, 71, 255, 0.41);
+      // height: min-content !important;
+      height: 197px !important;
+      background-color: $secondary-color;
+      color: $primary-color;
+      .group-card {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+
+        h6 {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
 /* Elément HTML caché pour la sémentique */
-.hidden {
+.hidden,
+.version-dekstop {
   display: none;
 }
 
@@ -247,12 +308,56 @@ a {
     box-shadow: 0px 4px 4px $color-shadow-25;
     top: 0;
   }
+
   .button-nav-header,
   .button-nav-header-login {
     display: none;
   }
 }
 @media (min-width: 1023px) {
+  .container-main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .version-dekstop {
+    display: flex;
+    flex-grow: 2;
+  }
+
+  .sections-container {
+    // position: absolute;
+    // right: 0px;
+    // top: 100px;
+    // width: 0px;
+    max-width: 0;
+    overflow: visible;
+    padding: 1%;
+    opacity: 0;
+    // background-color: #b0aeb4;
+    box-shadow: -5px 1px 5px $color-shadow;
+    transition: max-width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    // overflow-y: hidden;
+    // overflow-x: hidden;
+    // overflow-y: overlay;
+    .popular-book {
+      .card-container {
+        gap: 0px;
+      }
+    }
+    .card-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-height: 400px;
+      gap: 0;
+    }
+  }
+  .sections-container.visible {
+    max-width: 30%;
+    opacity: 1;
+  }
+  .card-category {
+    min-width: 100px !important;
+  }
   .logo {
     h1 {
       display: initial !important;
