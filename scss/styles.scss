@@ -1,19 +1,7 @@
 // Utilisation du décorateur @extend afin de bénéficier de l'héritage des classes
-
-/* VARIABLES SCSS */
-$primary-color: #8e6be1;
-$secondary-color: #f3eeff;
-$third-color: #ffc001;
-$color-h1: #59448d;
-$progress-bar-color: #a5a5a5;
-$book-page-background-color: #364b90;
-$third-opacite-color: rgba(255, 192, 1, 0.5);
-$color-nav-bar: #fff;
-$color-white: #fff;
-$color-shadow-50: rgba(0, 0, 0, 0.5);
-$color-shadow-25: rgba(0, 0, 0, 0.25);
-$color-shadow: rgb(0 0 0 / 8%);
-$color-card: #fe7834;
+@use "_card";
+@use "_nav_bar";
+@use "variables" as v;
 
 /* PARAMETRAGE */
 * {
@@ -26,53 +14,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/* STYLES GLOBAUX */
-.title-h1 {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.title-h2 {
-  font-size: 1.6875rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.title-h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.title-card {
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 4px;
-}
-.title-card-cover {
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.title-book {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.p-card {
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-}
-
-.font-card {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-.p-button {
-  font-size: 1.2rem;
-  font-weight: 400;
+ul {
+  list-style: none;
 }
 
 /* BUTTON */
@@ -88,7 +31,7 @@ a {
   border: none;
   text-decoration: none;
   display: none;
-  color: $primary-color;
+  color: v.$primary-color;
   background-color: transparent;
 }
 .button-nav-header-login {
@@ -98,47 +41,10 @@ a {
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  color: $color-white;
+  color: v.$color-white;
   border: none;
-  background-color: $primary-color;
+  background-color: v.$primary-color;
   display: none;
-}
-
-/* NAV BAR */
-.nav-bar {
-  z-index: 90000;
-  background-color: $color-nav-bar;
-  box-shadow: 0px -4px 7px $color-shadow-25;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 97px;
-  ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 14px;
-    align-items: center;
-    list-style: none;
-    height: inherit;
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      h1 {
-        display: none;
-        color: $color-h1;
-      }
-    }
-
-    .nav-bar-item-container {
-      display: flex;
-
-      .nav-bar-item {
-        background-color: #9ba3bc;
-        display: flex;
-      }
-    }
-  }
 }
 
 /* SECTION */
@@ -180,43 +86,11 @@ a {
         width: 100%;
       }
 
-      .card {
-        flex: 0 0 30%;
-        background-color: #fff;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        box-sizing: border-box;
-        min-width: 367px;
-        background-color: $primary-color;
-        color: $color-white;
-        box-shadow: -1px 8px 8px 0px rgba(151, 71, 255, 0.41);
-        &.card-size {
-          height: 187px;
-          min-height: 187px;
-        }
-        &:nth-child(even):not(.card-category) {
-          background-color: $color-card;
-        }
-        .group-card {
-          display: flex;
-          align-items: center;
-          .text-card {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-          }
-        }
-      }
-
       .card-category {
         @extend .card;
         height: 147px !important;
-        background-color: $secondary-color;
-        color: $primary-color;
+        background-color: v.$secondary-color;
+        color: v.$primary-color;
         .group-card {
           gap: 38px;
         }
@@ -272,13 +146,13 @@ a {
       padding: 10px;
       width: 80%;
       box-sizing: border-box;
-      background-color: $primary-color;
-      color: $color-white;
+      background-color: v.$primary-color;
+      color: v.$color-white;
       box-shadow: -1px 8px 8px 0px rgba(151, 71, 255, 0.41);
       // height: min-content !important;
       height: 197px !important;
-      background-color: $secondary-color;
-      color: $primary-color;
+      background-color: v.$secondary-color;
+      color: v.$primary-color;
       .group-card {
         padding: 5px;
         display: flex;
@@ -300,12 +174,141 @@ a {
   display: none;
 }
 
+// Style Liste Book
+
+.container-main-list-book {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .title-header {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    justify-content: start;
+    align-items: end;
+    div {
+      max-width: 53px;
+      height: 43px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  #list-books {
+    display: flex;
+    flex-direction: column;
+    .container-list-books {
+      display: flex;
+      flex-direction: row;
+
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      a {
+        min-width: 160px;
+        .card-book {
+          position: relative;
+          width: 184px;
+          min-width: 184px;
+          min-height: 126px;
+          height: 370px;
+          box-shadow: 0px 4px 4px v.$color-shadow-25;
+          border-radius: 9px;
+          padding: 20px;
+          .img {
+            width: 100%;
+            height: 255px;
+            img {
+              // min-height: 255px;
+              // height: 255px;
+              max-width: 100%;
+            }
+          }
+          .group-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            h3,
+            p {
+              padding: 3% 0 3% 6%;
+            }
+            gap: 14px;
+            background-color: v.$background-card-book;
+            .container-rating {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding-bottom: 5px;
+              max-width: 100%;
+              padding: 6%;
+              span {
+                display: flex;
+                justify-content: space-between;
+              }
+              div {
+                max-width: 100%;
+                display: flex;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Nav bar Filter
+  .filter-header {
+    width: 100%;
+    .filter-nav {
+      width: 80%;
+      margin: auto;
+      .filter-nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .filter-nav-bar-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-self: center;
+          gap: 20px;
+          min-height: 90px;
+        }
+        .filter-nav-bar-item:nth-child(1) .filter-img {
+          background-color: v.$color-filter-math;
+        }
+        .filter-nav-bar-item:nth-child(2) .filter-img {
+          background-color: v.$third-color;
+        }
+        .filter-nav-bar-item:nth-child(3) .filter-img {
+          background-color: v.$color-filter-art;
+        }
+        .filter-nav-bar-item:nth-child(4) .filter-img {
+          background-color: v.$color-filter-science;
+        }
+        .filter-img {
+          min-width: 56px;
+          min-height: 56px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
 /* MEDIA QUERRY */
 
+// Tablet
 @media (min-width: 768px) {
   .nav-bar {
     display: contents;
-    box-shadow: 0px 4px 4px $color-shadow-25;
+    box-shadow: 0px 4px 4px v.$color-shadow-25;
     top: 0;
   }
 
@@ -313,7 +316,11 @@ a {
   .button-nav-header-login {
     display: none;
   }
+  .card-book {
+    width: 220px;
+  }
 }
+// Dekstop
 @media (min-width: 1023px) {
   .container-main {
     display: flex;
@@ -325,20 +332,12 @@ a {
   }
 
   .sections-container {
-    // position: absolute;
-    // right: 0px;
-    // top: 100px;
-    // width: 0px;
     max-width: 0;
     overflow: visible;
     padding: 1%;
     opacity: 0;
-    // background-color: #b0aeb4;
-    box-shadow: -5px 1px 5px $color-shadow;
+    box-shadow: -5px 1px 5px v.$color-shadow;
     transition: max-width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-    // overflow-y: hidden;
-    // overflow-x: hidden;
-    // overflow-y: overlay;
     .popular-book {
       .card-container {
         gap: 0px;
@@ -370,5 +369,13 @@ a {
   .button-nav-header,
   .button-nav-header-login {
     display: flex;
+  }
+
+  .container-list-books {
+    .card-book {
+      max-height: 666px;
+      min-height: 666px;
+      max-width: 442px;
+    }
   }
 }
