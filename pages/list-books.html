@@ -3,9 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/script/books.js" defer></script>
+    <title>Liste des livres a lire</title>
   </head>
   <body>
-    <h1>Hello Girl</h1>
+    <header>
+      <nav class="nav-bar">
+        <ul>
+          <li class="nav-bar-item">
+            <a class="logo" href="/index.html">
+              <img
+                src="/img/icons/owl-logo.svg"
+                alt="Le logo biblio de maniac"
+              />
+
+              <h1 class="title-h1">Biblio Maniac</h1>
+            </a>
+          </li>
+          <li class="nav-bar-item">
+            <a class="icon-mobile" href="/pages/list-books.html">
+              <img
+                src="/img/icons/book-and-pencil.svg"
+                alt="Lien pour acceder à la page des livres à lire."
+              />
+            </a>
+            <button class="button-nav-header p-button">Read</button>
+          </li>
+          <li class="nav-bar-item">
+            <a class="icon-mobile" href="#">
+              <img
+                src="/img/icons/air-pods.svg"
+                alt="Lien pour acceder à la page des livres à écouter."
+              />
+            </a>
+            <button class="button-nav-header p-button">Listen</button>
+          </li>
+          <li class="nav-bar-item">
+            <a class="icon-mobile" href="/pages/login.html">
+              <img
+                src="/img/icons/user.svg"
+                alt="Lien pour acceder à la page de connexion."
+              />
+            </a>
+            <button class="button-nav-header-login p-button">Connexion</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container-main-list-book">
+      <div class="title-header">
+        <h1 class="title-h3">Learning Books</h1>
+        <div>
+          <img
+            class="icon-mobile"
+            src="/img/icons/learn-book.svg"
+            alt="Logo Biblio Maniac"
+          />
+        </div>
+      </div>
+      <section class="filter-header">
+        <nav class="filter-nav">
+          <ul class="filter-nav-bar">
+            <li class="filter-nav-bar-item">
+              <div class="filter-img">
+                <img src="/img/icons/math.svg" alt="" />
+              </div>
+              <span>Math</span>
+            </li>
+            <li class="filter-nav-bar-item">
+              <div class="filter-img">
+                <img src="/img/icons/english.svg" alt="" />
+              </div>
+              <span>English</span>
+            </li>
+            <li class="filter-nav-bar-item">
+              <div class="filter-img">
+                <img src="/img/icons/art-filter.svg" alt="" />
+              </div>
+              <span>Arts</span>
+            </li>
+            <li class="filter-nav-bar-item">
+              <div class="filter-img">
+                <img src="/img/icons/science.svg" alt="" />
+              </div>
+              <span>Science</span>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <article id="list-books"></article>
+    </div>
   </body>
 </html>
