@@ -1,0 +1,33 @@
+@use "variables" as v;
+
+.card {
+  flex: 0 0 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 367px;
+  background-color: v.$primary-color;
+  color: v.$color-white;
+  box-shadow: -1px 8px 8px 0px rgba(151, 71, 255, 0.41);
+  &.card-size {
+    height: 187px;
+    min-height: 187px;
+  }
+  &:nth-child(even):not(.card-category) {
+    background-color: v.$color-card;
+  }
+  .group-card {
+    display: flex;
+    align-items: center;
+    .text-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
