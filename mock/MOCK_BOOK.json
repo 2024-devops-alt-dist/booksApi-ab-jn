@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Peter Pan",
+    "image": "/img/peterpan.png",
+    "author": "J.M Barrie",
+    "rating": 4.7,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 2,
+    "title": "Pinocchio & Pnocchia",
+    "image": "/img/pino.png",
+    "author": "Carlo Collodi",
+    "rating": 4.8,
+    "isFavorite": true,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 3,
+    "title": "Contes de Grimm",
+    "image": "/img/grimm.png",
+    "author": ".Les frères Gromm",
+    "rating": 4.9,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 4,
+    "title": "Le roi lion",
+    "image": "/img/king.png",
+    "author": "Walt Disney",
+    "rating": 4.1,
+    "isFavorite": false,
+    "isPopular": false,
+    "category": "Art"
+  },
+  {
+    "id": 5,
+    "title": "Cendrillon",
+    "image": "/img/cind.png",
+    "author": "Charles Perrault",
+    "rating": 4.6,
+    "isFavorite": true,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 6,
+    "title": "Bambie",
+    "image": "/img/bambie.png",
+    "author": "Felix Salten",
+    "rating": 4.3,
+    "isFavorite": true,
+    "isPopular": false,
+    "category": "Art"
+  },
+  {
+    "id": 7,
+    "title": "War and Peace",
+    "image": "https://picsum.photos/seed/education/200/300",
+    "author": "Leo Tolstoy",
+    "rating": 4.5,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Education"
+  },
+  {
+    "id": 8,
+    "title": "The Odyssey",
+    "image": "https://picsum.photos/seed/art/200/300",
+    "author": "Homer",
+    "rating": 4.4,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 9,
+    "title": "Crime and Punishment",
+    "image": "https://picsum.photos/seed/math/200/300",
+    "author": "Fyodor Dostoevsky",
+    "rating": 4.7,
+    "isFavorite": true,
+    "isPopular": true,
+    "category": "Math"
+  },
+  {
+    "id": 10,
+    "title": "Brave New World",
+    "image": "https://picsum.photos/seed/education/200/300",
+    "author": "Aldous Huxley",
+    "rating": 4.8,
+    "isFavorite": false,
+    "isPopular": false,
+    "category": "Education"
+  },
+  {
+    "id": 11,
+    "title": "The Iliad",
+    "image": "https://picsum.photos/seed/art/200/300",
+    "author": "Homer",
+    "rating": 4.2,
+    "isFavorite": true,
+    "isPopular": false,
+    "category": "Art"
+  },
+  {
+    "id": 12,
+    "title": "Frankenstein",
+    "image": "https://picsum.photos/seed/education/200/300",
+    "author": "Mary Shelley",
+    "rating": 4.3,
+    "isFavorite": true,
+    "isPopular": false,
+    "category": "Education"
+  },
+  {
+    "id": 13,
+    "title": "The Picture of Dorian Gray",
+    "image": "https://picsum.photos/seed/art/200/300",
+    "author": "Oscar Wilde",
+    "rating": 4.7,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 14,
+    "title": "Les Misérables",
+    "image": "https://picsum.photos/seed/math/200/300",
+    "author": "Victor Hugo",
+    "rating": 4.9,
+    "isFavorite": true,
+    "isPopular": true,
+    "category": "Math"
+  },
+  {
+    "id": 15,
+    "title": "Dracula",
+    "image": "https://picsum.photos/seed/education/200/300",
+    "author": "Bram Stoker",
+    "rating": 4.4,
+    "isFavorite": false,
+    "isPopular": false,
+    "category": "Education"
+  },
+  {
+    "id": 16,
+    "title": "The Brothers Karamazov",
+    "image": "https://picsum.photos/seed/math/200/300",
+    "author": "Fyodor Dostoevsky",
+    "rating": 4.6,
+    "isFavorite": true,
+    "isPopular": true,
+    "category": "Math"
+  },
+  {
+    "id": 17,
+    "title": "The Hobbit",
+    "image": "https://picsum.photos/seed/art/200/300",
+    "author": "J.R.R. Tolkien",
+    "rating": 4.8,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Art"
+  },
+  {
+    "id": 18,
+    "title": "The Lord of the Rings",
+    "image": "https://picsum.photos/seed/education/200/300",
+    "author": "J.R.R. Tolkien",
+    "rating": 4.9,
+    "isFavorite": true,
+    "isPopular": true,
+    "category": "Education"
+  },
+  {
+    "id": 19,
+    "title": "The Alchemist",
+    "image": "https://picsum.photos/seed/art/200/300",
+    "author": "Paulo Coelho",
+    "rating": 4.5,
+    "isFavorite": false,
+    "isPopular": false,
+    "category": "Art"
+  },
+  {
+    "id": 20,
+    "title": "A Tale of Two Cities",
+    "image": "https://picsum.photos/seed/math/200/300",
+    "author": "Charles Dickens",
+    "rating": 4.7,
+    "isFavorite": false,
+    "isPopular": true,
+    "category": "Math"
+  }
+]

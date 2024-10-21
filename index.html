@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="/script/books.js" type="module"></script>
+    <script src="/script/script.js" defer></script>
     <title>Biblio Maniac</title>
   </head>
   <body>
@@ -55,232 +57,278 @@
       </nav>
     </header>
 
-    <article class="sections-container">
-      <h2 class="hidden">Activité disponnible sur biblio maniac</h2>
-      <div class="search">
+    <div class="container-main">
+      <div class="search version-dekstop">
         <img src="/img/icons/search.svg" alt="" />
       </div>
-      <section class="section activity">
-        <h3 class="title-h2">Activity</h3>
+      <article class="sections-container">
+        <h2 class="hidden">Activité disponnible sur biblio maniac</h2>
+        <section class="section activity">
+          <h3 class="title-h2">Activity</h3>
 
-        <div class="card-container">
-          <div class="card card-size">
-            <div class="group-card">
-              <img src="/img/icons/stash_trophy-solid.svg" alt="icon coupe" />
-              <div class="text-card">
-                <h6 class="title-card">Happy Summer</h6>
-                <p class="p-card">
-                  Makes you go out of the house and enjoy the sunshine.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="group-card">
-              <img src="/img/icons/stash_trophy-solid.svg" alt="icon coupe" />
-              <div class="text-card">
-                <h6 class="title-card">Happy Summer</h6>
-                <p>Makes you go out of the house and enjoy the sunshine.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="group-card">
-              <img src="/img/icons/stash_trophy-solid.svg" alt="icon coupe" />
-              <div class="text-card">
-                <h6 class="title-card">Happy Summer</h6>
-                <p>Makes you go out of the house and enjoy the sunshine.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section popular-book">
-        <h3 class="title-h2">Popular Books</h3>
-        <div class="card-container">
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">February</h6>
-                <div>
+          <div class="card-container">
+            <div class="card">
+              <div class="group-card">
+                <div class="container-img icon-mobile">
                   <img
-                    src="/img/peterpan.png"
-                    alt="Couverture du livre de Peter Pan"
+                    src="/img/icons/stash_trophy-solid.svg"
+                    alt="icon coupe"
                   />
+                </div>
+                <div class="text-card">
+                  <h6 class="title-card-mobile">Happy Summer</h6>
+                  <p class="p-card">
+                    Makes you go out of the house and enjoy the sunshine.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="group-card">
+                <div class="container-img icon-mobile">
+                  <img
+                    src="/img/icons/stash_trophy-solid.svg"
+                    alt="icon coupe"
+                  />
+                </div>
+                <div class="text-card">
+                  <h6 class="title-card">Happy Summer</h6>
+                  <p>Makes you go out of the house and enjoy the sunshine.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="group-card">
+                <div class="container-img icon-mobile">
+                  <img
+                    src="/img/icons/stash_trophy-solid.svg"
+                    alt="icon coupe"
+                  />
+                </div>
+                <div class="text-card">
+                  <h6 class="title-card">Happy Summer</h6>
+                  <p>Makes you go out of the house and enjoy the sunshine.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">October</h6>
-                <div>
-                  <img
-                    src="/img/bambie.png"
-                    alt="Couverture du livre de Bambie"
-                  />
+        </section>
+        <section class="section popular-book">
+          <h3 class="title-h2">Popular Books</h3>
+          <div class="card-container">
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">February</h6>
+                  <div>
+                    <img
+                      src="/img/peterpan.png"
+                      alt="Couverture du livre de Peter Pan"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">October</h6>
+                  <div>
+                    <img
+                      src="/img/bambie.png"
+                      alt="Couverture du livre de Bambie"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">November</h6>
+                  <div>
+                    <img
+                      src="/img/cind.png"
+                      alt="Couverture du livre de Cendrillion"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">December</h6>
+                  <div>
+                    <img
+                      src="/img/king.png"
+                      alt="Couverture du livre le Roi Lion"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">January</h6>
+                  <div>
+                    <img
+                      src="/img/pino.png"
+                      alt="Couverture du livre Pinnochio"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">February</h6>
+                  <div>
+                    <img
+                      src="/img/peterpan.png"
+                      alt="Couverture du livre de Peter Pan"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">March</h6>
+                  <div>
+                    <img
+                      src="/img/grimm.png"
+                      alt="Couverture du livre les frère Grimm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">april</h6>
+                  <div>
+                    <img
+                      src="/img/king.png"
+                      alt="Couverture du livre le Roi Lion"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">May</h6>
+                  <div>
+                    <img
+                      src="/img/grimm.png"
+                      alt="Couverture du livre les frère Grimm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">June</h6>
+                  <div>
+                    <img
+                      src="/img/grimm.png"
+                      alt="Couverture du livre les frère Grimm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-book-small">
+              <div class="group-card">
+                <div class="text-card">
+                  <h6 class="title-card-cover">July</h6>
+                  <div>
+                    <img
+                      src="/img/grimm.png"
+                      alt="Couverture du livre les frère Grimm"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">November</h6>
-                <div>
-                  <img
-                    src="/img/cind.png"
-                    alt="Couverture du livre de Cendrillion"
-                  />
+        </section>
+        <section class="section categorie">
+          <h3 class="title-h2">
+            <a href="/pages/list-categories.html">Category</a>
+          </h3>
+          <div class="card-container">
+            <a href="/pages/list-books.html">
+              <div class="card-category">
+                <div class="group-card">
+                  <div class="container-img icon-mobile">
+                    <img
+                      src="/img/icons/learn-book.svg"
+                      alt="icon d'un livre."
+                    />
+                  </div>
+                  <div class="text-card">
+                    <h6 class="title-card-mobile">Learning Book</h6>
+                    <p>We read story book and look at cartoons.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">December</h6>
-                <div>
-                  <img
-                    src="/img/king.png"
-                    alt="Couverture du livre le Roi Lion"
-                  />
+            </a>
+            <a href="#">
+              <div class="card-category">
+                <div class="group-card">
+                  <div class="container-img icon-mobile">
+                    <img
+                      src="/img/icons/bouk-lune.svg"
+                      alt="icon d'un livre."
+                    />
+                  </div>
+                  <div class="text-card">
+                    <h6 class="title-card">Story Book</h6>
+                    <p>We read story book and look at cartoons.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">January</h6>
-                <div>
-                  <img
-                    src="/img/pino.png"
-                    alt="Couverture du livre Pinnochio"
-                  />
+            </a>
+
+            <a href="">
+              <div class="card-category">
+                <div class="group-card">
+                  <div class="container-img icon-mobile">
+                    <img src="/img/icons/educ.svg" alt="icon d'un livre." />
+                  </div>
+                  <div class="text-card">
+                    <h6 class="title-card">Education Book</h6>
+                    <p>We read Education book and look at cartoons.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">February</h6>
-                <div>
-                  <img
-                    src="/img/peterpan.png"
-                    alt="Couverture du livre de Peter Pan"
-                  />
+            </a>
+            <a href="">
+              <div class="card-category">
+                <div class="group-card">
+                  <div class="container-img icon-mobile">
+                    <img src="/img/icons/art.svg" alt="icon d'un art." />
+                  </div>
+                  <div class="text-card">
+                    <h6 class="title-card">Education Book</h6>
+                    <p>We read Education book and look at cartoons.</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">March</h6>
-                <div>
-                  <img
-                    src="/img/grimm.png"
-                    alt="Couverture du livre les frère Grimm"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">april</h6>
-                <div>
-                  <img
-                    src="/img/king.png"
-                    alt="Couverture du livre le Roi Lion"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">May</h6>
-                <div>
-                  <img
-                    src="/img/grimm.png"
-                    alt="Couverture du livre les frère Grimm"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">June</h6>
-                <div>
-                  <img
-                    src="/img/grimm.png"
-                    alt="Couverture du livre les frère Grimm"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-book-small">
-            <div class="group-card">
-              <div class="text-card">
-                <h6 class="title-card-cover">July</h6>
-                <div>
-                  <img
-                    src="/img/grimm.png"
-                    alt="Couverture du livre les frère Grimm"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section categorie">
-        <h3 class="title-h2">Category</h3>
-        <div class="card-container">
-          <div class="card-category">
-            <div class="group-card">
-              <div class="container-img">
-                <img src="/img/icons/bouk-lune.svg" alt="icon d'un livre." />
-              </div>
-              <div class="text-card">
-                <h6 class="title-card">Story Book</h6>
-                <p>We read story book and look at cartoons.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-category">
-            <div class="group-card">
-              <div class="container-img">
-                <img src="/img/icons/educ.svg" alt="icon d'un livre." />
-              </div>
-              <div class="text-card">
-                <h6 class="title-card">Education Book</h6>
-                <p>We read Education book and look at cartoons.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-category">
-            <div class="group-card">
-              <div class="container-img">
-                <img src="/img/icons/art.svg" alt="icon d'un art." />
-              </div>
-              <div class="text-card">
-                <h6 class="title-card">Education Book</h6>
-                <p>We read Education book and look at cartoons.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </article>
+        </section>
+      </article>
+      <article class="version-dekstop" id="list-books"></article>
+    </div>
   </body>
 </html>
