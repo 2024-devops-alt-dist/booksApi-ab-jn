@@ -87,4 +87,4 @@ const creatCardCoverBook = async () => {
   //   document.body.insertBefore(cardContainer, listBooks);
 };
 
-creatCardCoverBook();
+export default creatCardCoverBook();
