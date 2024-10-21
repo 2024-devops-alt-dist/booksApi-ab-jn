@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Peter Pan",
-    "image": "/img/peterpan.png",
+    "image": "../img/peterpan.png",
     "author": "J.M Barrie",
     "rating": 4.7,
     "isFavorite": false,
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "Pinocchio & Pnocchia",
-    "image": "/img/pino.png",
+    "image": "../img/pino.png",
     "author": "Carlo Collodi",
     "rating": 4.8,
     "isFavorite": true,
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Contes de Grimm",
-    "image": "/img/grimm.png",
+    "image": "../img/grimm.png",
     "author": ".Les frères Gromm",
     "rating": 4.9,
     "isFavorite": false,
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Le roi lion",
-    "image": "/img/king.png",
+    "image": "../img/king.png",
     "author": "Walt Disney",
     "rating": 4.1,
     "isFavorite": false,
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Cendrillon",
-    "image": "/img/cind.png",
+    "image": "../img/cind.png",
     "author": "Charles Perrault",
     "rating": 4.6,
     "isFavorite": true,
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Bambie",
-    "image": "/img/bambie.png",
+    "image": "../img/bambie.png",
     "author": "Felix Salten",
     "rating": 4.3,
     "isFavorite": true,
