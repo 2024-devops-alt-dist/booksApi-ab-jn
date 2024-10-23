@@ -222,17 +222,16 @@ a {
   display: none;
 }
 
-/*BOOK PAGE SCSS*/
-/*Menu desktop*/
+/* MENU DESKTOP ASIDE*/
 .aside {
   display: none;
 }
 
+/* BOOK PAGE SCSS */
 .content-page-web {
   display: flex;
 }
 .content-page-web .content-book {
-  flex-wrap: wrap;
   /* Image section */
   /*Reading section*/
 }
@@ -329,6 +328,40 @@ a {
   font-size: 1.4rem;
 }
 
+/* AUDIO PAGE */
+.audio-page {
+  display: flex;
+}
+.audio-page .content-audio {
+  margin: 30px;
+  border-color: #364b90;
+  border: 2px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20%;
+  position: relative;
+  z-index: 1;
+}
+.audio-page .content-audio .header-image {
+  display: flex;
+  justify-content: center;
+  background-color: #364b90;
+}
+.audio-page .content-audio .header-image .image-audio {
+  width: 65%;
+}
+.audio-page .content-audio .header-image .container-close {
+  display: flex;
+  justify-content: end;
+}
+.audio-page .content-audio .header-image .container-close a img {
+  width: 150%;
+}
+.audio-page .content-audio .chapter {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* MEDIA QUERRY */
 @media (min-width: 768px) {
   .nav-bar {
@@ -361,7 +394,7 @@ a {
   }
   .aside .title-h1 {
     text-align: center;
-    margin-top: 100px;
+    padding-top: 100px;
     font-weight: 700;
   }
   .aside .nav-book-page-desktop {
@@ -391,6 +424,15 @@ a {
     padding-right: 10px;
     width: 40px;
     height: auto;
+  }
+  .content-book {
+    display: flex;
+  }
+  .content-book .hero {
+    display: none;
+  }
+  .content-book .hero .icon-close {
+    width: 120px;
   }
 }
 
