@@ -1,4 +1,19 @@
 // Utilisation du décorateur @extend afin de bénéficier de l'héritage des classes
+
+/* VARIABLES SCSS */
+$primary-color: #8e6be1;
+$secondary-color: #f3eeff;
+$third-color: #ffc001;
+$color-h1: #59448d;
+$progress-bar-color: #a5a5a5;
+$book-page-background-color: #364b90;
+$third-opacite-color: rgba(255, 192, 1, 0.5);
+$color-nav-bar: #fff;
+$color-white: #fff;
+$color-shadow-50: rgba(0, 0, 0, 0.5);
+$color-shadow-25: rgba(0, 0, 0, 0.25);
+$color-card: #fe7834;
+$image-peter-pan: url("../img/peter-pan.jpg");
 @use "_card";
 @use "_nav_bar";
 @use "variables" as v;
@@ -174,6 +189,81 @@ ul {
   display: none;
 }
 
+/* MENU DESKTOP ASIDE*/
+.aside {
+  display: none;
+}
+
+/* BOOK PAGE SCSS */
+.content-page-web{
+  display: flex;
+
+  .content-book{
+
+    /* Image section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: $secondary-color;
+      height: 60vh;
+      position: relative;
+      z-index: 1;
+      background-image: $image-peter-pan;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: $image-peter-pan;
+      background-size: cover;
+      filter: blur(8px);
+      z-index: 1;
+    }
+    .hero .icon-close {
+      display: flex;
+      justify-content: flex-end;
+      z-index: 2;
+      margin: 0 20px 5px 0;
+    }
+    .hero .image-cover {
+      position: relative;
+      z-index: 2;
+      height: 25vh;
+      width: 100%;
+    }
+    
+    .hero .info-hero-block {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 3;
+      padding: 40px 0 6px 25px;
+    }
+    .hero .info-hero-block .title-h1 {
+      margin: 0;
+      font-weight: bold;
+    }
+    .hero .info-hero-block .info-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin: 15px 0 5px 0;
+    }
+    .hero .info-hero-block .info-header .title-h2 {
+      padding-bottom: 10px;
+    }
+    .hero .info-hero-block .info-header .icon-header {
+      display: flex;
+      align-items: center;
+      padding: 35px 15px 0 0;
+    }
+    .hero .info-hero-block .info-header .icon-header img {
+      width: 35px;
+    }
 
 // Style Liste Book
 
@@ -369,34 +459,76 @@ ul {
   width: 35px;
 }
 
-.section-book-reading {
-  padding: 20px 20px 0 20px;
-  position: relative;
-  z-index: 1;
-  color: #f3eeff;
-  background-color: #364b90;
+    /*Reading section*/
+    .section-book-reading {
+      height: 40vh;
+      padding: 20px 20px 0 20px;
+      position: relative;
+      z-index: 1;
+      color: $secondary-color;
+      background-color: $book-page-background-color;
+    }
+    .section-book-reading p {
+      margin: 0;
+    }
+    .section-book-reading .link-book-page {
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      bottom: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px 0 20px;
+      gap: 20px;
+    }
+    .section-book-reading .link-book-page .read {
+      background-color: $third-color;
+      width: 150px;
+      padding: 15px;
+      border-radius: 35px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  }
 }
-.section-book-reading p {
-  margin: 0;
-}
-.section-book-reading .link-book-page {
-  position: fixed;
-  z-index: 2;
-  bottom: 5px;
+
+/* AUDIO PAGE */
+.audio-page{
   display: flex;
-  align-items: center;
-  padding: 0 20px 0 35px;
-  gap: 20px;
-}
-.section-book-reading .link-book-page .read {
-  background-color: #ffc001;
-  width: 150px;
-  padding: 15px;
-  border-radius: 35px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
+  .content-audio{
+    margin: 30px;
+    border-color: $book-page-background-color;
+    border: 2px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20%;
+    position: relative;
+    z-index: 1;
+    .header-image{
+      display: flex;
+      justify-content: center;
+     background-color: $book-page-background-color;
+      .image-audio{
+        width: 65%;
+      }
+      .container-close{
+        display: flex;
+        justify-content: end;
+        a{
+          img{
+            width: 150%;
+          }
+        }
+      }
+      }
+    .chapter{
+      display: flex;
+      justify-content: space-between;
+    }
+    }
+  }
+
 
 
 /* MEDIA QUERRY */
@@ -418,6 +550,7 @@ ul {
   }
 }
 // Dekstop
+
 @media (min-width: 1023px) {
   .container-main {
     display: flex;
@@ -467,6 +600,65 @@ ul {
   .button-nav-header-login {
     display: flex;
   }
+
+  .aside{
+    display: block;
+    color: $secondary-color;
+    width: 220px;
+    height: 100vh;
+    background-color: $color-h1;
+    
+    .title-h1{
+      text-align: center;
+      padding-top: 100px;
+      font-weight: 700;
+    }
+
+    .nav-book-page-desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 80vh;
+      
+      margin: 20px;
+      
+      .first-group-links{
+        margin: 45px 0 0 0;
+      }
+      
+      .second-group-links{
+        margin-top: -200px;
+      }
+      
+      .third-group-links{
+        margin: 110px 0 0 0;
+      }
+
+      a{
+        padding: 5px 0 5px 0;
+        font-size: 1.25rem;
+        color: $secondary-color;
+        display: flex;
+        align-items: center;
+        img{
+          padding-right: 10px;
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .content-book{
+    display: flex;
+    .hero{
+      display: none;
+      .icon-close{
+        width: 120px
+      }
+      
+    }
+  }
+  
 
   .container-list-books {
     .card-book {
