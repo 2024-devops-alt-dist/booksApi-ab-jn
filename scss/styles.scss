@@ -16,11 +16,11 @@ $color-card: #fe7834;
 $image-peter-pan: url("../img/peter-pan.jpg");
 @use "_card";
 @use "_nav_bar";
-@use "variables" as v;
+@use "_variables" as v;
 
 /* PARAMETRAGE */
 * {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -508,7 +508,7 @@ ul {
     .header-image{
       display: flex;
       justify-content: center;
-     background-color: $book-page-background-color;
+      background-color: $book-page-background-color;
       .image-audio{
         width: 65%;
       }
@@ -526,8 +526,8 @@ ul {
       display: flex;
       justify-content: space-between;
     }
-    }
   }
+}
 
 
 
