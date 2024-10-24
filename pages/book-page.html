@@ -9,10 +9,10 @@
     />
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Peter Pan</title>
-    <!-- <script src="../exo.js" defer></script> -->
+    <script src="../script/bookDetails.js" defer></script>
 </head>
 <body>
-<div class="content-page-web">
+<div style="display:flex; flex-direction: column;"class="content-page-web">
     <aside class="aside">
         <h1 class="title-h1">Peter Pan</h1>
         <nav class="nav-book-page-desktop">
@@ -52,6 +52,11 @@
             </div>
         </nav>
     </aside>
+
+    <div id="book-details">
+
+    </div>
+
     <section class="content-book">
         <section class="hero">
             <a class="icon-close" href="">
@@ -59,7 +64,7 @@
             </a>
             <img class="image-cover" src="../img/peter-pan.jpg" alt="affiche du dessin animé Peter Pan" />
             <section class="info-hero-block">
-                <h1 class="title-h1">Peter Pan</h1>
+                <h1 id="bookTitle"class="title-h1">Peter Pan</h1>
                 <div class="info-header">
                     <div>
                         <h2 class="title-h2">J-M Barnie</h2>
