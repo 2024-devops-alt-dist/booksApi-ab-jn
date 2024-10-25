@@ -243,6 +243,7 @@ ul {
 /* BOOK PAGE SCSS */
 .content-page-web{
   display: flex;
+//   flex-direction: column;
 
   .content-book{
 
@@ -255,7 +256,7 @@ ul {
       height: 60vh;
       position: relative;
       z-index: 1;
-      background-image: $image-peter-pan;
+      // background-image: $image-peter-pan;
     }
     .hero::before {
       content: "";
@@ -264,7 +265,7 @@ ul {
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: $image-peter-pan;
+      // background-image: $image-peter-pan;
       background-size: cover;
       filter: blur(8px);
       z-index: 1;
@@ -276,10 +277,10 @@ ul {
       margin: 0 20px 5px 0;
     }
     .hero .image-cover {
-      position: relative;
-      z-index: 2;
-      height: 25vh;
-      width: 100%;
+      // position: relative;
+      // z-index: 2;
+      // height: 25vh;
+      // width: 100%;
     }
 
     .hero .info-hero-block {
@@ -445,12 +446,15 @@ ul {
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  // justify-content: flex-end;
   color: #f3eeff;
   height: 60vh;
   position: relative;
   z-index: 1;
-  background-image: url("../img/peter-pan.jpg");
+  // background-image: url("../img/peter-pan.jpg");
+  background-size: cover;
 }
 .hero::before {
   content: "";
@@ -459,10 +463,12 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../img/peter-pan.jpg");
+  background-color: #364b90;
+  // background-image: url("../img/peter-pan.jpg");
   background-size: cover;
   backdrop-filter: 1;
   filter: blur(8px);
+  opacity: 80%;
   z-index: 1;
 }
 .hero .icon-close {
@@ -474,9 +480,10 @@ ul {
 }
 .hero .image-cover {
   position: relative;
+  display: flex;
   z-index: 2;
-  height: 25vh;
-  width: 100%;
+  height: auto;
+  width: 200px;
 }
 .hero .info-hero-block {
   display: flex;
@@ -500,7 +507,7 @@ ul {
 }
 .hero .info-hero-block .info-header .icon-header {
   display: flex;
-  align-items: center;
+  margin: 0 0 0 150px;
   padding: 35px 15px 0 0;
 }
 .hero .info-hero-block .info-header .icon-header img {
@@ -509,7 +516,8 @@ ul {
 
     /*Reading section*/
     .section-book-reading {
-      height: 40vh;
+      display: flex;
+      flex-direction: column;
       padding: 20px 20px 0 20px;
       position: relative;
       z-index: 1;
@@ -517,7 +525,9 @@ ul {
       background-color: $book-page-background-color;
     }
     .section-book-reading p {
-      margin: 0;
+      margin: 0 25px;
+      text-align: justify;
+
     }
     .section-book-reading .link-book-page {
       justify-content: center;
@@ -528,6 +538,7 @@ ul {
       align-items: center;
       padding: 0 20px 0 20px;
       gap: 20px;
+      margin: 125px;
     }
     .section-book-reading .link-book-page .read {
       background-color: $third-color;
@@ -544,6 +555,7 @@ ul {
 /* AUDIO PAGE */
 .audio-page{
   display: flex;
+  flex-direction: column;
   .content-audio{
     margin: 30px;
     border-color: $book-page-background-color;
@@ -698,6 +710,7 @@ ul {
   }
   .content-book{
     display: flex;
+    flex-direction: column;
     .hero{
       display: none;
       .icon-close{
