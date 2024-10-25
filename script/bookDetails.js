@@ -5,11 +5,12 @@ function displayBookDetails(book) {
     const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No authors available';
     const description = book.volumeInfo.description || 'No description available';
     const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '';
+
     const bookTitles = document.getElementsByClassName("title-h1")
     for (let i = 0; i < bookTitles.length; i++) {
         bookTitles[i].textContent = title;
     }
-    const bookAuthors = document.getElementBy==("bookAuthors")
+    const bookAuthors = document.getElementBy("bookAuthors")
     bookAuthors.textContent = authors;
     const bookDescription = document.getElementById("bookDescription")
     bookDescription.textContent = description;
@@ -17,8 +18,15 @@ function displayBookDetails(book) {
     bookImg.src = thumbnail;
     const colorBackground = document.querySelector(".content-book .hero")
     colorBackground.style.backgroundImage = `url(${thumbnail})`;
+    // const headTitle = document.getElementById("headTitle")
+    // headTitle.textContent = title;
+    document.title = title;
 }
 
+const title = book.volumeInfo.title || 'No title available';
+window.onload = function() {
+    document.title = title;
+};
 
 function fetchBookFromApi(bookId) {
     fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=${API_KEY}`)
