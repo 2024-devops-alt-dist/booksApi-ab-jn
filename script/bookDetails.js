@@ -23,8 +23,24 @@ function displayBookDetails(book) {
     bookDescription.textContent = description;
     const bookImg = document.getElementById('bookImg')
     bookImg.src = thumbnail;
+    // const bookImgBackground = document.getElementById('bookImgBackground')
+    // bookImgBackground.style.backgroundImage = thumbnail
+    // const bookImgBackgrounds = document.getElementsByClassName('hero');
+    // for (let i = 0; i < bookImgBackgrounds.length; i++) {
+    //     bookImgBackgrounds[i].style.backgroundImage = `url("${thumbnail}")`;
+    // const bookImgBackground = thumbnail;
+    // document.documentElement.style.setProperty('$image-peter-pan', bookImgBackground);
+    const colorBackground = document.querySelector(".content-book .hero")
+    console.log(colorBackground)
+    // colorBackground.style.backgroundColor = "red";
+    colorBackground.style.backgroundImage = `url(${thumbnail})`;
+    }
 
-}
+    window.addEventListener('load', function() {
+        });
+
+
+
 
 function fetchBookFromApi(bookId) {
     fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=${API_KEY}`)
