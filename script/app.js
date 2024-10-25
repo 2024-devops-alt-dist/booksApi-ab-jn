@@ -41,7 +41,7 @@ function displayBooks(books) {
 
         bookElement.innerHTML = `
 
-        <a href="./pages/book-page.html?id=${bookId}" onclick="viewBookDetails(${index})">
+        <a href="./pages/book-page.html?id=${bookId}">
             <div class="card-book" style="background-image:url('${thumbnail}')">
                 <div class="group-text">
                     <h3>${title}</h3>
@@ -49,17 +49,20 @@ function displayBooks(books) {
                 </div>
             </div>
         </a>
-
-        `;
-        booksList.appendChild(bookElement);
-    });
-    localStorage.setItem('books', JSON.stringify(books));
-}
-
-// Function to save the selected book data in localStorage
-function viewBookDetails(index) {
-    const books = JSON.parse(localStorage.getItem('books'));
-    const selectedBook = books[index];
-    localStorage.setItem('selectedBook', JSON.stringify(selectedBook));
-}
-
+            
+            `;
+            booksList.appendChild(bookElement);
+        });
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+    
+    // Function to save the selected book data in localStorage
+    function viewBookDetails(index) {
+        console.log('hello localStorage')
+        const books = JSON.parse(localStorage.getItem('books'));
+        const selectedBook = books[index];
+        localStorage.setItem('selectedBook', JSON.stringify(selectedBook));
+    }
+    
+    
+    // <button onclick="viewBookDetails(${index})">View Details</button>
