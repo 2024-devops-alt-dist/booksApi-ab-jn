@@ -6,14 +6,41 @@ function displayBookDetails(book) {
     const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No authors available';
     const description = book.volumeInfo.description || 'No description available';
     const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '';
+    // bookDetailsDiv.innerHTML = `
+    //     <h2>${title}</h2>
+    //     <p><strong>Authors:</strong> ${authors}</p>
+    //     <p>${description}</p>
+    //     ${thumbnail ? `<img src="${thumbnail}" alt="${title}">` : ''}
+    // `;
+    const bookTitles = document.getElementsByClassName("title-h1")
+    for (let i = 0; i < bookTitles.length; i++) {
+        bookTitles[i].textContent = title;
+    }
+    const bookAuthors = document.getElementBy==("bookAuthors")
+    bookAuthors.textContent = authors;
+    const bookDescription = document.getElementById("bookDescription")
+    console.log(description)
+    bookDescription.textContent = description;
+    const bookImg = document.getElementById('bookImg')
+    bookImg.src = thumbnail;
+    // const bookImgBackground = document.getElementById('bookImgBackground')
+    // bookImgBackground.style.backgroundImage = thumbnail
+    // const bookImgBackgrounds = document.getElementsByClassName('hero');
+    // for (let i = 0; i < bookImgBackgrounds.length; i++) {
+    //     bookImgBackgrounds[i].style.backgroundImage = `url("${thumbnail}")`;
+    // const bookImgBackground = thumbnail;
+    // document.documentElement.style.setProperty('$image-peter-pan', bookImgBackground);
+    const colorBackground = document.querySelector(".content-book .hero")
+    console.log(colorBackground)
+    // colorBackground.style.backgroundColor = "red";
+    colorBackground.style.backgroundImage = `url(${thumbnail})`;
+    }
 
-    bookDetailsDiv.innerHTML = `
-        <h2>${title}</h2>
-        <p><strong>Authors:</strong> ${authors}</p>
-        <p>${description}</p>
-        ${thumbnail ? `<img src="${thumbnail}" alt="${title}">` : ''}
-    `;
-}
+    window.addEventListener('load', function() {
+        });
+
+
+
 
 function fetchBookFromApi(bookId) {
     fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=${API_KEY}`)
