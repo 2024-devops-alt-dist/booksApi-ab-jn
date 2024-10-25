@@ -20,7 +20,7 @@ $image-peter-pan: url("../img/peter-pan.jpg");
 
 /* PARAMETRAGE */
 * {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -70,9 +70,53 @@ ul {
   right: 0;
   padding: 1%;
 }
+
+.searchSection {
+  display: flex;
+  position: fixed;
+  top:10px;
+  right:10px;
+  padding: 7px;
+  background: #ffffff;
+  border-radius: 10px;
+  z-index: 1000000;
+
+}
+
 .container-main {
   position: relative;
   overflow-x: hidden;
+}
+
+.searchedBooks {
+  display: flex;
+  margin-top: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  .card-book {
+    border-radius: 6px;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 160px;
+    height: 230px;
+    display: flex;
+    align-items: end;
+    .group-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 70px;
+      width: 100%;
+      background: #f3eeff8e;
+      h3 {
+        font-size: 16px;
+      }
+      .p-card {
+        font-size: 12px;
+        
+      }
+    }
+  }
 }
 
 .sections-container {
@@ -80,8 +124,8 @@ ul {
   flex-direction: column-reverse;
   gap: 9px;
   position: relative;
-  padding: 4%;
-  padding-top: 6%;
+  // padding: 4%;
+  // padding-top: 6%;
   min-height: 90vh;
   overflow-x: hidden;
 
@@ -92,7 +136,7 @@ ul {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+      // gap: 20px;
       overflow-x: hidden;
       overflow-x: auto;
       padding: 20px 0;
@@ -106,6 +150,8 @@ ul {
         height: 147px !important;
         background-color: v.$secondary-color;
         color: v.$primary-color;
+        margin-left: 8px;
+        margin-right: 8px;
         .group-card {
           gap: 38px;
         }
@@ -236,7 +282,7 @@ ul {
       // height: 25vh;
       // width: 100%;
     }
-    
+
     .hero .info-hero-block {
       display: flex;
       flex-direction: column;
@@ -352,6 +398,8 @@ ul {
       }
     }
   }
+
+
 
   // Nav bar Filter
   .filter-header {
@@ -520,7 +568,7 @@ ul {
     .header-image{
       display: flex;
       justify-content: center;
-      background-color: $book-page-background-color;
+     background-color: $book-page-background-color;
       .image-audio{
         width: 65%;
       }
@@ -538,8 +586,8 @@ ul {
       display: flex;
       justify-content: space-between;
     }
+    }
   }
-}
 
 
 
@@ -619,7 +667,7 @@ ul {
     width: 220px;
     height: 100vh;
     background-color: $color-h1;
-    
+
     .title-h1{
       text-align: center;
       padding-top: 100px;
@@ -631,17 +679,17 @@ ul {
       flex-direction: column;
       justify-content: space-between;
       height: 80vh;
-      
+
       margin: 20px;
-      
+
       .first-group-links{
         margin: 45px 0 0 0;
       }
-      
+
       .second-group-links{
         margin-top: -200px;
       }
-      
+
       .third-group-links{
         margin: 110px 0 0 0;
       }
@@ -668,10 +716,10 @@ ul {
       .icon-close{
         width: 120px
       }
-      
+
     }
   }
-  
+
 
   .container-list-books {
     .card-book {

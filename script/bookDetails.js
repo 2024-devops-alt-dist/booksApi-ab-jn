@@ -1,17 +1,10 @@
 const API_KEY = 'AIzaSyAZSXaq2jKWgfLA5ONNg7YCgFiKq5CQihQ';
 
 function displayBookDetails(book) {
-    const bookDetailsDiv = document.getElementById('book-details');
     const title = book.volumeInfo.title || 'No title available';
     const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No authors available';
     const description = book.volumeInfo.description || 'No description available';
     const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '';
-    // bookDetailsDiv.innerHTML = `
-    //     <h2>${title}</h2>
-    //     <p><strong>Authors:</strong> ${authors}</p>
-    //     <p>${description}</p>
-    //     ${thumbnail ? `<img src="${thumbnail}" alt="${title}">` : ''}
-    // `;
     const bookTitles = document.getElementsByClassName("title-h1")
     for (let i = 0; i < bookTitles.length; i++) {
         bookTitles[i].textContent = title;
@@ -19,27 +12,12 @@ function displayBookDetails(book) {
     const bookAuthors = document.getElementBy==("bookAuthors")
     bookAuthors.textContent = authors;
     const bookDescription = document.getElementById("bookDescription")
-    console.log(description)
     bookDescription.textContent = description;
     const bookImg = document.getElementById('bookImg')
     bookImg.src = thumbnail;
-    // const bookImgBackground = document.getElementById('bookImgBackground')
-    // bookImgBackground.style.backgroundImage = thumbnail
-    // const bookImgBackgrounds = document.getElementsByClassName('hero');
-    // for (let i = 0; i < bookImgBackgrounds.length; i++) {
-    //     bookImgBackgrounds[i].style.backgroundImage = `url("${thumbnail}")`;
-    // const bookImgBackground = thumbnail;
-    // document.documentElement.style.setProperty('$image-peter-pan', bookImgBackground);
     const colorBackground = document.querySelector(".content-book .hero")
-    console.log(colorBackground)
-    // colorBackground.style.backgroundColor = "red";
     colorBackground.style.backgroundImage = `url(${thumbnail})`;
-    }
-
-    window.addEventListener('load', function() {
-        });
-
-
+}
 
 
 function fetchBookFromApi(bookId) {
@@ -57,7 +35,7 @@ function fetchBookFromApi(bookId) {
 
 function loadBookDetails() {
     const book = JSON.parse(localStorage.getItem('selectedBook'));
-    if (book) {
+    if (!book) {
         // Display cached book data from localStorage
         displayBookDetails(book);
         // Optionally fetch fresh data in the background
